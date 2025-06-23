@@ -1,0 +1,76 @@
+// // 1. Override Bootstrap variables before import
+// $body-bg: #1e1e2f !default;          // dark navy background
+// $body-color: #f2c1d1 !default;       // soft rose text
+// $primary: #f78ca0 !default;           // rose pink for primary color (links, buttons, etc.)
+// $link-color: $primary !default;      // links color rose
+// $link-hover-color: lighten($primary, 10%) !default;
+
+$navbar-bg: #440115 !default;        // dark purple/rose navbar bg
+// $navbar-light-color: $body-color !default;
+// $navbar-light-hover-color: $link-hover-color !default;
+
+$footer-bg: #440115 !default;
+// $footer-color: $body-color !default;
+
+// 2. Import Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// 3. Custom styles for elements Bootstrap variables don't cover well
+
+// body {
+//   background-color: $body-bg;
+//   color: $body-color;
+// }
+
+.navbar {
+  background-color: $navbar-bg;
+
+  // .navbar-brand img {
+  //   filter: brightness(0) invert(1); // invert logo for dark bg
+  // }
+  
+  // .nav-link, .navbar-text {
+  //   color: $body-color;
+  //   transition: color 0.3s ease;
+    
+  //   &:hover, &.active {
+  //     color: $primary;
+  //     font-weight: 600;
+  //   }
+  // }
+}
+
+footer {
+  background-color: $footer-bg;
+  // text-align: center;
+  // padding: 1.5rem 0;
+  
+  // a {
+  //   color: $body-color;
+  //   font-size: 1.5rem;
+  //   margin: 0 0.4rem;
+  //   transition: color 0.3s ease;
+    
+  //   &:hover {
+  //     color: $primary;
+  //   }
+  // }
+}
+
+// h2, h5 {
+//   color: $primary;
+// }
+
+// .border-rose {
+//   border-color: $primary !important;
+// }
+
+// .icon-rose {
+//   color: $primary;
+// }
+
+// .card, .img-fluid {
+//   border-radius: 0.5rem;
+//   border: 1px solid $primary;
+//   box-shadow: 0 0 8px rgba($primary, 0.6);
+// }

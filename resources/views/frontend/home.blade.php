@@ -45,7 +45,7 @@
                 <h3 class="text-center mb-4 pb-2 border-bottom">Wedding Cakes</h3>
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/wcakes/wcake7.jpg" class="card-img-top" alt="Wedding Cake">
+                        <img src="https://m.media-amazon.com/images/I/71BTWmjDziL._UF894,1000_QL80_.jpg" class="card-img-top" alt="Wedding Cake">
                         <div class="card-body">
                             <h5 class="card-title">Elegant White</h5>
                             <p class="card-text">Classic white wedding cake with delicate floral accents.</p>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/wcakes/wcake5.jpg" class="card-img-top" alt="Wedding Cake">
+                        <img src="https://funcakes.com/content/uploads/2025/02/naked-wedding-cake-960x960-c-default.jpg" class="card-img-top" alt="Wedding Cake">
                         <div class="card-body">
                             <h5 class="card-title">Rustic Charm</h5>
                             <p class="card-text">Naked cake with fresh flowers and berries.</p>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/wcakes/wcake3.jpg" class="card-img-top" alt="Wedding Cake">
+                        <img src="https://images.squarespace-cdn.com/content/v1/65fc26988551a5639cad9129/1711726478571-Y0P0YTDS4U7EOQ1ARH0R/3+tier+Buttercream+fresh+flowers+Summer.JPG" class="card-img-top" alt="Wedding Cake">
                         <div class="card-body">
                             <h5 class="card-title">Modern Elegance</h5>
                             <p class="card-text">Sleek design with metallic accents.</p>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/wcakes/wcake6.jpg" class="card-img-top" alt="Wedding Cake">
+                        <img src="https://cdn11.bigcommerce.com/s-vm6doh2w4n/images/stencil/original/products/6739/18054/sez4l5fo471joav83jgf__78539.1728509582.jpg?c=1" class="card-img-top" alt="Wedding Cake">
                         <div class="card-body">
                             <h5 class="card-title">Floral Fantasy</h5>
                             <p class="card-text">Luxurious cake with sugar flowers.</p>
