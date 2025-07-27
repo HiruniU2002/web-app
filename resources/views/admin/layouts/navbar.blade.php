@@ -1,23 +1,73 @@
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-       <img src="{{asset('admin/images/Cake-Logo.png')}}" alt="Logo" width="50" height="50" class="rounded-circle">
-        <span class="fw-bold">CAKES BY HIRU</span>
-      </a>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #A67B5B;">
+  <div class="container-fluid">
+    <!-- Brand Logo & Name -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="{{asset('admin/images/Cake-Logo.png')}}" 
+           alt="CAKES BY HIRU Logo" 
+           width="50" 
+           height="50" 
+           class="rounded-circle me-2 shadow-sm">
+      <span class="fw-bold fs-5">CAKES BY HIRU</span>
+    </a>
 
-      <!-- Search Bar -->
-      <form class="d-flex mx-auto w-50" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search orders, cakes..." aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Right Controls -->
-      <div class="d-flex">
-        <form action="{{ route('logout') }}" method="POST" class="d-inline">
-           @csrf
-           <button type="submit" class="btn btn-outline-light">Logout</button>
-        </form>
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+     
 
-      </div>
+      <!-- Right-aligned Navigation Items -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Notifications -->
+     
+
+        <!-- User Profile -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" 
+             href="#" 
+             role="button" 
+             data-bs-toggle="dropdown">
+            
+            <span class="d-none d-lg-inline">Admin</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-sign-out-alt me-2"></i>Logout
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<style>
+  /* Custom styling for the navbar */
+  .navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Placeholder text color for search */
+  .form-control::placeholder {
+    color: rgba(255,255,255,0.7);
+  }
+  
+  /* Active nav items */
+  .nav-link.active {
+    font-weight: 600;
+  }
+</style>

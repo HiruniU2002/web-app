@@ -3,26 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cakes by Hiru - Premium Bakery</title>
-    <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap-icons.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/main.css')}}">
+    <title>@yield('title', 'Cakes by Hiru - Premium Bakery')</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="{{ asset('frontend/css/bootstrap-icons.css') }}" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link href="{{ asset('frontend/css/main.css') }}" rel="stylesheet">
+
+    <!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FFF8E7;
+        }
+    </style>
+
+    @stack('styles')
 </head>
 <body>
-    <!-- Navigation -->
-     @include('frontend.layouts.navbar')
 
+    <!-- Navigation Bar -->
+    @include('frontend.layouts.navbar')
 
-    <div>
+    <!-- Page Content -->
+    <main class="py-1">
         @yield('content')
-    </div>
-
+    </main>
 
     <!-- Footer -->
-      @include('frontend.layouts.footer')
-  
+    @include('frontend.layouts.footer')
 
-    <!-- Bootstrap JS -->
-    <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
+    <!-- Bootstrap Bundle JS -->
+    <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
+
+    @stack('scripts')
 </body>
 </html>
