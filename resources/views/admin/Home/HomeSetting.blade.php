@@ -40,10 +40,7 @@
                 <label for="heading" class="form-label">Heading</label>
                 <textarea class="form-control" id="heading" name="heading" rows="3" placeholder="Enter top heading"></textarea>
             </div>
-            <!-- <div class="mb-3">
-                <label for="sub_heading" class="form-label">Sub Heading</label>
-                <input type="text" class="form-control" id="sub_heading" name="sub_heading" placeholder="Enter Sub heading">
-            </div> -->
+            
             <div class="mb-3">
                 <label for="sub_heading" class="form-label">Sub Heading</label>
                 <textarea class="form-control" id="sub_heading" name="sub_heading" rows="5" placeholder="Enter Sub heading"></textarea>
@@ -119,18 +116,18 @@
             @csrf
     <input type="hidden" name="HomeSetting_id" value="{{$HomeSetting->id}}">
         <div class="modal-body">
+
             <!--heading-->
         <div class="mb-3">
             <label for="heading" class="form-label">Heading</label>
                 <textarea class="form-control" id="heading" name="heading" rows = "2">{{$HomeSetting->heading ?? '' }}</textarea>
-         </div>
-            <!--sub heading-->
-        
-        <div class="mb-3">
-                <label for="sub_heading" class="form-label">Sub Heading</label>
-                <textarea class="form-control" id="sub_heading" name="sub_heading" rows="3">{{ $HomeSetting->sub_heading ?? '' }}</textarea>
+        </div>
 
-            </div>
+            <!--sub heading-->
+        <div class="mb-3">
+            <label for="sub_heading" class="form-label">Sub Heading</label>
+                <textarea class="form-control" id="sub_heading" name="sub_heading" rows="3">{{ $HomeSetting->sub_heading ?? '' }}</textarea>
+        </div>
 
             <!--Image upload-->
         <div class="mb-3">
@@ -138,11 +135,13 @@
                 <input type="file" class="form-control" id="image_upload" name="image_upload">
         </div>
 
+            <!-- top sub heading -->
         <div class="mb-3">
             <label for="top_heading" class="form-label">Top Sub Heading</label>
                 <input type="text" class="form-control" id="top_heading" name="top_heading" value="{{$HomeSetting->top_heading}}">
-         </div>
+        </div>
 
+            <!-- bottom heading -->
          <div class="mb-3">
             <label for="bottom_heading" class="form-label">Bottom Heading</label>
                 <input type="text" class="form-control" id="bottom_heading" name="bottom_heading" value="{{$HomeSetting->bottom_heading}}">

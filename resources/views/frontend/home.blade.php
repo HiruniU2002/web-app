@@ -1,13 +1,9 @@
 @extends('frontend.layouts.master')
 
-    @section('content')
-    <div>
-
-    
+@section('content')
+<div>
     @include('frontend.Home.slider')
-    </section>
     
-
     @include('frontend.Home.HomeSetting')
 
     <!-- Products Section -->
@@ -15,191 +11,118 @@
         <div class="container">
             <h2 class="text-center mb-5 fw-bold">Our Delicious Creations</h2>
             
-            <!-- Wedding Cakes -->
+            <!-- Wedding Cakes --> 
             <div class="row mb-5" id="wedding">
-                <h3 class="text-center mb-4 pb-2 border-bottom">Wedding Cakes</h3>
+                <h3 class="text-center mb-4 pb-2 border-bottom">{{ App\Models\Cake::TYPE_WEDDING }}</h3>
+                @forelse($weddingCakes as $cake)
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://m.media-amazon.com/images/I/71BTWmjDziL._UF894,1000_QL80_.jpg" class="card-img-top" alt="Wedding Cake">
+                        <img src="{{ asset('storage/'.$cake->image_path) }}" class="card-img-top" alt="{{ $cake->cake_name }}" style="height: 200px; object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title">Elegant White</h5>
-                            <p class="card-text">Classic white wedding cake with delicate floral accents.</p>
-                            <a href="#" class="btn btn-outline-primary">Inquire</a>
+                            <h5 class="card-title">{{ $cake->cake_name }}</h5>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    Flavour: {{ $cake->cake_flavour }}<br>
+                                    Size: {{ $cake->cake_size }}<br>
+                                    Price: LKR {{$cake->cake_price}}
+                                </small>
+                            </p>
+                            <!-- <p class="card-text">{{ Str::limit($cake->cake_description, 80) }}</p> -->
+                            <a href="#" class="btn btn-outline-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://funcakes.com/content/uploads/2025/02/naked-wedding-cake-960x960-c-default.jpg" class="card-img-top" alt="Wedding Cake">
-                        <div class="card-body">
-                            <h5 class="card-title">Rustic Charm</h5>
-                            <p class="card-text">Naked cake with fresh flowers and berries.</p>
-                            <a href="#" class="btn btn-outline-primary">Inquire</a>
-                        </div>
-                    </div>
+                @empty
+                <div class="col-12">
+                    <p class="text-center">No {{ App\Models\Cake::TYPE_WEDDING }} available at the moment.</p>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://images.squarespace-cdn.com/content/v1/65fc26988551a5639cad9129/1711726478571-Y0P0YTDS4U7EOQ1ARH0R/3+tier+Buttercream+fresh+flowers+Summer.JPG" class="card-img-top" alt="Wedding Cake">
-                        <div class="card-body">
-                            <h5 class="card-title">Modern Elegance</h5>
-                            <p class="card-text">Sleek design with metallic accents.</p>
-                            <a href="#" class="btn btn-outline-primary">Inquire</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://cdn11.bigcommerce.com/s-vm6doh2w4n/images/stencil/original/products/6739/18054/sez4l5fo471joav83jgf__78539.1728509582.jpg?c=1" class="card-img-top" alt="Wedding Cake">
-                        <div class="card-body">
-                            <h5 class="card-title">Floral Fantasy</h5>
-                            <p class="card-text">Luxurious cake with sugar flowers.</p>
-                            <a href="#" class="btn btn-outline-primary">Inquire</a>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
             
             <!-- Birthday Cakes -->
             <div class="row mb-5" id="birthday">
-                <h3 class="text-center mb-4 pb-2 border-bottom">Birthday Cakes</h3>
+                <h3 class="text-center mb-4 pb-2 border-bottom">{{ App\Models\Cake::TYPE_BIRTHDAY }}</h3>
+                @forelse($birthdayCakes as $cake)
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/cake/4.jpeg" class="card-img-top" alt="Birthday Cake">
+                        <img src="{{ asset('storage/'.$cake->image_path) }}" class="card-img-top" alt="{{ $cake->cake_name }}" style="height: 200px; object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title">Chocolate Dream</h5>
-                            <p class="card-text">Rich chocolate cake with chocolate ganache.</p>
+                            <h5 class="card-title">{{ $cake->cake_name }}</h5>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    Flavour: {{ $cake->cake_flavour }}<br>
+                                    Size: {{ $cake->cake_size }}<br>
+                                    Price:LKR {{$cake->cake_price}}
+                                </small>
+                            </p>
+                            <!-- <p class="card-text">{{ Str::limit($cake->cake_description, 80) }}</p> -->
                             <a href="#" class="btn btn-outline-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/cake/6.jpg" class="card-img-top" alt="Birthday Cake">
-                        <div class="card-body">
-                            <h5 class="card-title">Vanilla Celebration</h5>
-                            <p class="card-text">Classic vanilla cake with buttercream.</p>
-                            <a href="#" class="btn btn-outline-primary">Order Now</a>
-                        </div>
-                    </div>
+                @empty
+                <div class="col-12">
+                    <!-- <p class="text-center">No {{ App\Models\Cake::TYPE_BIRTHDAY }} available at the moment.</p> -->
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/cake/14.jpg" class="card-img-top" alt="Birthday Cake">
-                        <div class="card-body">
-                            <h5 class="card-title">Rainbow Delight</h5>
-                            <p class="card-text">Colorful layers with vanilla frosting.</p>
-                            <a href="#" class="btn btn-outline-primary">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                         <img src="frontend/images/cake/11.jpg" class="card-img-top" alt="Birthday Cake">
-                        <div class="card-body">
-                            <h5 class="card-title">Kids' Favorite</h5>
-                            <p class="card-text">Fun designs for children's birthdays.</p>
-                            <a href="#" class="btn btn-outline-primary">Order Now</a>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
             
             <!-- Cup Cakes -->
             <div class="row mb-5" id="cupcakes">
-                <h3 class="text-center mb-4 pb-2 border-bottom">Cup Cakes</h3>
+                <h3 class="text-center mb-4 pb-2 border-bottom">{{ App\Models\Cake::TYPE_CUPCAKES }}</h3>
+                @forelse($cupcakes as $cake)
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/cupcakes/cupcake2.jpg" class="card-img-top" alt="Cupcakes">
+                        <img src="{{ asset('storage/'.$cake->image_path) }}" class="card-img-top" alt="{{ $cake->cake_name }}" style="height: 200px; object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title">Classic Vanilla</h5>
-                            <p class="card-text">Fluffy vanilla cupcakes with buttercream.</p>
+                            <h5 class="card-title">{{ $cake->cake_name }}</h5>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    Flavour: {{ $cake->cake_flavour }}<br>
+                                    Size: {{ $cake->cake_size }}<br>
+                                    Price: LKR {{ number_format($cake->cake_price, 2) }}
+                                </small>
+                            </p>
+                            <!-- <p class="card-text">{{ Str::limit($cake->cake_description, 80) }}</p> -->
                             <a href="#" class="btn btn-outline-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/cupcakes/cupcake5.jpg" class="card-img-top" alt="Cupcakes">
-                        <div class="card-body">
-                            <h5 class="card-title">Decadent Chocolate</h5>
-                            <p class="card-text">Rich chocolate cupcakes with ganache.</p>
-                            <a href="#" class="btn btn-outline-primary">Order Now</a>
-                        </div>
-                    </div>
+                @empty
+                <div class="col-12">
+                    <p class="text-center">No {{ App\Models\Cake::TYPE_CUPCAKES }} available at the moment.</p>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/cupcakes/cupcake8.jpg" class="card-img-top" alt="Cupcakes">
-                        <div class="card-body">
-                            <h5 class="card-title">Red Velvet</h5>
-                            <p class="card-text">Classic red velvet with cream cheese.</p>
-                            <a href="#" class="btn btn-outline-primary">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/cupcakes/cupcake4.jpg" class="card-img-top" alt="Cupcakes">
-                        <div class="card-body">
-                            <h5 class="card-title">Fancy Toppings</h5>
-                            <p class="card-text">Gourmet cupcakes with creative toppings.</p>
-                            <a href="#" class="btn btn-outline-primary">Order Now</a>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
             
             <!-- Brownies -->
             <div class="row" id="brownies">
-                <h3 class="text-center mb-4 pb-2 border-bottom">Brownies</h3>
+                <h3 class="text-center mb-4 pb-2 border-bottom">{{ App\Models\Cake::TYPE_BROWNIES }}</h3>
+                @forelse($brownies as $cake)
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/brownie/brownie10.jpg" class="card-img-top" alt="Brownies">
+                        <img src="{{ asset('storage/'.$cake->image_path) }}" class="card-img-top" alt="{{ $cake->cake_name }}" style="height: 200px; object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title">Classic Fudge</h5>
-                            <p class="card-text">Rich, fudgy brownies.</p>
+                            <h5 class="card-title">{{ $cake->cake_name }}</h5>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    Flavour: {{ $cake->cake_flavour }}<br>
+                                    Size: {{ $cake->cake_size }}<br>
+                                    Price: LKR {{$cake->cake_price}}
+                                </small>
+                            </p>
+                            <!-- <p class="card-text">{{ Str::limit($cake->cake_description, 80) }}</p> -->
                             <a href="#" class="btn btn-outline-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/brownie/brownie3.jpg" class="card-img-top" alt="Brownies">
-                        <div class="card-body">
-                            <h5 class="card-title">Walnut Crunch</h5>
-                            <p class="card-text">Fudgy brownies with walnuts.</p>
-                            <a href="#" class="btn btn-outline-primary">Order Now</a>
-                        </div>
-                    </div>
+                @empty
+                <div class="col-12">
+                    <p class="text-center">No {{ App\Models\Cake::TYPE_BROWNIES }} available at the moment.</p>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/brownie/brownie5.jpg" class="card-img-top" alt="Brownies">
-                        <div class="card-body">
-                            <h5 class="card-title">Blondies</h5>
-                            <p class="card-text">White chocolate brownies.</p>
-                            <a href="#" class="btn btn-outline-primary">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="frontend/images/brownie/brownie8.jpg" class="card-img-top" alt="Brownies">
-                        <div class="card-body">
-                            <h5 class="card-title">Cheesecake Swirl</h5>
-                            <p class="card-text">Chocolate brownies with cheesecake.</p>
-                            <a href="#" class="btn btn-outline-primary">Order Now</a>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
         </div>
     </section>
-    </div>
+</div>
 @endsection
-
-
-
-
-

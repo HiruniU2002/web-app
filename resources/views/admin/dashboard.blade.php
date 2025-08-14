@@ -15,6 +15,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-3">
           <div class="card text-bg-success shadow-sm">
             <div class="card-body">
@@ -24,6 +25,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-3">
           <div class="card text-bg-warning shadow-sm">
             <div class="card-body">
@@ -33,6 +35,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-3">
           <div class="card text-bg-danger shadow-sm">
             <div class="card-body">
@@ -42,6 +45,7 @@
             </div>
           </div>
         </div>
+
       </div>
 
       <!-- Orders Table -->
@@ -50,6 +54,7 @@
         <div class="table-responsive">
           <table class="table table-bordered table-hover align-middle">
             <thead class="table-dark">
+
               <tr>
                 <th>Order ID</th>
                 <th>Customer</th>
@@ -59,6 +64,7 @@
               </tr>
             </thead>
             <tbody>
+
               <tr>
                 <td>#101</td>
                 <td>Dinithi</td>
@@ -66,6 +72,7 @@
                 <td>$45</td>
                 <td><span class="badge bg-success">Delivered</span></td>
               </tr>
+
               <tr>
                 <td>#102</td>
                 <td>Kavindu</td>
@@ -73,6 +80,7 @@
                 <td>$60</td>
                 <td><span class="badge bg-warning text-dark">Pending</span></td>
               </tr>
+
               <tr>
                 <td>#103</td>
                 <td>Nadeesha</td>
@@ -80,9 +88,11 @@
                 <td>$300</td>
                 <td><span class="badge bg-danger">Cancelled</span></td>
               </tr>
+              
             </tbody>
           </table>
         </div>
       </div>
+
     </div>
 @endsection

@@ -18,7 +18,7 @@
  @include('admin.layouts.sidebar')
 
     <!-- Main Content -->
-     <div class="container-fluid p-4">
+  <div class="container-fluid p-4">
   @yield('content')
   </div>
 

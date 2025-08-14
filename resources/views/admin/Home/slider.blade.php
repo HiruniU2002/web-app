@@ -5,7 +5,6 @@
       <h2 class="mb-4">Welcome, Slide Manager 👋</h2>
     
         
-        <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Add new slide
     </button>
@@ -102,6 +101,8 @@
                 <h5 class="modal-title" id="slideModalLabel">Edit Slide {{$slider->id}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
+
+
 <form action="/sliderUpdate" method="POST" enctype="multipart/form-data">
 
             @csrf

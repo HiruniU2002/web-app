@@ -12,17 +12,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-light active" href="/">Home</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                            
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="#wedding">Wedding Cakes</a></li>
-                            <li><a class="dropdown-item " href="#birthday">Birthday Cakes</a></li>
-                            <li><a class="dropdown-item " href="#cupcakes">Cup Cakes</a></li>
-                            <li><a class="dropdown-item" href="#brownies">Brownies</a></li>
-                        </ul>
-                    </li> -->
+                    
                     <li class="nav-item">
                         <a class="nav-link text-light" href="/product">Our Products</a>
                     </li>

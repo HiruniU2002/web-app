@@ -27,7 +27,7 @@
             {{ $HomeSetting->top_heading }}
           </h3>
           <p class="mb-3 text-muted">{{ $HomeSetting->bottom_heading }}</p>
-          <a href="" class="btn btn-outline-danger btn-sm px-4">Explore Cakes</a>
+          <a href="/product" class="btn btn-outline-danger btn-sm px-4">Explore Cakes</a>
         </div>
       </div>
     </div>

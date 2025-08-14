@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<div class="d-flex flex-column p-3 text-white" style="width: 250px; height: 100vh; background: #6B4A3B;">
+<div class="d-flex flex-column p-3 text-white min-vh-100" style="width: 250px; background: #6B4A3B;">
 
   <hr style="border-color: #D8B5A5;">
   <ul class="nav nav-pills flex-column mb-auto">
@@ -8,8 +8,13 @@
         <i class="bi bi-speedometer2 me-2"></i> Dashboard
       </a>
     </li>
+        <li class="nav-item">
+      <a href="/profileIndex" class="nav-link text-white rounded-3 px-3 py-2 hover-bg-pink">
+        <i class="bi bi-basket2-fill me-2"></i> Profile
+      </a>
+    </li>
     <li>
-      <a href="#" class="nav-link text-white rounded-3 px-3 py-2 hover-bg-pink">
+      <a href="/cakes" class="nav-link text-white rounded-3 px-3 py-2 hover-bg-pink">
         <i class="bi bi-basket2-fill me-2"></i> Manage Cakes
       </a>
     </li>
@@ -20,19 +25,19 @@
     </li>
     <li>
       <a href="/homeIndex" class="nav-link text-white rounded-3 px-3 py-2 hover-bg-pink">
-        <i class="bi bi-house-fill me-2"></i> HomePage Heading
+        <i class="bi bi-house-fill me-2"></i> HomePage Setting
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link text-white rounded-3 px-3 py-2 hover-bg-pink">
-        <i class="bi bi-card-checklist me-2"></i> Orders
+      <a href="/contact/admin" class="nav-link text-white rounded-3 px-3 py-2 hover-bg-pink">
+        <i class="bi bi-card-checklist me-2"></i> Messages
       </a>
     </li>
-    <li>
+    <!-- <li>
       <a href="#" class="nav-link text-white rounded-3 px-3 py-2 hover-bg-pink">
         <i class="bi bi-people-fill me-2"></i> Customers
       </a>
-    </li>
+    </li> -->
     <li class="nav-item dropdown">
       <a href="#" class="nav-link dropdown-toggle text-white rounded-3 px-3 py-2" id="usersDropdown" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="bi bi-person-gear me-2"></i> Users Manager
